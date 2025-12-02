@@ -1,0 +1,33 @@
+.sidebar {
+  position: fixed;
+  left: -260px;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  background: #232f3e;
+  color: white;
+  padding-top: 80px;
+  transition: left 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 0;
+  font-size: 18px;
+}
+
+.sidebar nav a:hover {
+  color: #febd69;
+}

@@ -1,0 +1,52 @@
+.topbar {
+  width: 100%;
+  background: #131921;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search {
+  display: flex;
+  width: 40%;
+}
+
+.search input {
+  flex: 1;
+  padding: 6px;
+}
+
+.search button {
+  padding: 6px 10px;
+  border: none;
+  background: #febd69;
+  cursor: pointer;
+}
+
+.right a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}

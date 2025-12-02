@@ -1,0 +1,26 @@
+<div class="login-container">
+
+  <h1 class="logo">Idearte</h1>
+
+  <div class="card">
+
+    <h2>Fazer login</h2>
+
+    <label for="email">E-mail</label>
+    <input id="email" type="email" [(ngModel)]="email">
+
+    <label for="senha">Senha</label>
+    <input id="senha" type="password" [(ngModel)]="senha">
+
+    <button class="btn-login" (click)="login()">Continuar</button>
+
+    <p class="erro" *ngIf="erro">{{ erro }}</p>
+
+    <p class="termos">
+      Ao continuar, você concorda com os <strong>termos de uso</strong> da Idearte.
+    </p>
+
+    <a routerLink="/cadastro" class="link">Criar conta na Idearte</a>
+
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="produto-container" *ngIf="produto">
+
+  <!-- Imagem grande -->
+  <div class="imagem-area">
+    <img [src]="produto.imagem" [alt]="produto.nome" />
+  </div>
+
+  <!-- Informações -->
+  <div class="info-area">
+
+    <h1 class="titulo">{{ produto.nome }}</h1>
+
+    <p class="descricao">{{ produto.descricao }}</p>
+
+    <div class="preco">
+      R$ {{ produto.preco | number : '1.2-2' }}
+    </div>
+
+    <div class="acoes">
+      <button class="btn-carrinho" (click)="adicionarAoCarrinho()">
+        Adicionar ao Carrinho
+      </button>
+
+      <button class="btn-comprar">
+        Comprar Agora
+      </button>
+    </div>
+
+  </div>
+
+</div>

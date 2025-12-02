@@ -1,0 +1,38 @@
+<h1 class="titulo">Seu Carrinho</h1>
+
+<div class="carrinho-container" *ngIf="itens.length > 0; else vazio">
+
+  <div class="lista-itens">
+    <div class="item" *ngFor="let item of itens">
+      
+      <img [src]="item.imagem" [alt]="item.nome">
+
+      <div class="info">
+        <h2>{{ item.nome }}</h2>
+        <p class="preco">{{ item.preco | currency:'BRL' }}</p>
+
+        <div class="quantidade">
+          <button (click)="diminuir(item.id)">-</button>
+          <span>{{ item.quantidade }}</span>
+          <button (click)="adicionar(item.id)">+</button>
+        </div>
+
+        <button class="remover" (click)="remover(item.id)">Remover</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="resumo">
+    <h3>Total:</h3>
+    <p class="total">{{ total | currency:'BRL' }}</p>
+    <button class="finalizar">Finalizar Compra</button>
+  </div>
+
+</div>
+
+
+<ng-template #vazio>
+  <p class="vazio-msg">Seu carrinho está vazio 😕</p>
+  <a routerLink="/produtos" class="voltar">Ver Produtos</a>
+</ng-template>

@@ -1,0 +1,46 @@
+<!-- Banner Principal -->
+<section class="banner">
+  <div class="banner-content">
+    <h1>Bem-vindo à Idearte</h1>
+    <p>Impressões, personalizados, brindes e muito mais.</p>
+
+    <a routerLink="/produtos" class="btn-banner">
+      Ver Produtos →
+    </a>
+  </div>
+</section>
+
+<!-- Categorias -->
+<section class="categoria-lista">
+  <h2>Categorias</h2>
+
+  <div class="cards">
+    <a routerLink="/produtos" class="card">
+      <img src="https://via.placeholder.com/300x200?text=Impressos" />
+      <h3>Impressos</h3>
+    </a>
+
+    <a routerLink="/produtos" class="card">
+      <img src="https://via.placeholder.com/300x200?text=Camisetas" />
+      <h3>Camisetas</h3>
+    </a>
+
+    <a routerLink="/produtos" class="card">
+      <img src="https://via.placeholder.com/300x200?text=Canecas" />
+      <h3>Canecas</h3>
+    </a>
+  </div>
+</section>
+
+<!-- Destaques -->
+<section class="destaques">
+  <h2>Destaques</h2>
+
+  <div class="produtos-destaque">
+    <div class="item" *ngFor="let i of [1,2,3,4]">
+      <img src="https://via.placeholder.com/220x200?text=Produto+{{i}}" />
+      <p>Produto {{i}}</p>
+      <button routerLink="/produtos">Ver mais</button>
+    </div>
+  </div>
+</section>

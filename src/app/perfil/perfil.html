@@ -1,0 +1,7 @@
+<button class="btn-logout" (click)="logout()">Sair da conta</button>
+
+<app-logout
+  *ngIf="showLogout"
+  (close)="closeLogout()"
+  (confirm)="logoutConfirmado()">
+</app-logout>

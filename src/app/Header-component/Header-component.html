@@ -1,0 +1,18 @@
+<header class="topbar">
+
+  <div class="left">
+    <button class="menu-btn" (click)="toggle.emit()">☰</button>
+    <div class="logo" routerLink="/">Idearte</div>
+  </div>
+
+  <div class="search">
+    <input [(ngModel)]="search" placeholder="Buscar produtos..." />
+    <button (click)="realizarBusca()">🔍</button>
+  </div>
+
+  <div class="right">
+    <a routerLink="/login">Login</a>
+    <a routerLink="/carrinho">🛒 Carrinho</a>
+  </div>
+
+</header>
